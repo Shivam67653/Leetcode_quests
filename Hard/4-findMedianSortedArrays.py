@@ -42,8 +42,8 @@ class Solution:
         while left <= right:                       #binary search is the key
             part1 = (left + right) // 2            # partition location is to be done starting the shorter array
             part2 = (len1 + len2 + 1) // 2 - part1        
-            max_left1 = float('-inf') if part1 == 0 else nums1[part1 - 1]
-            min_right1 = float('inf') if part1 == len1 else nums1[part1]
+            max_left1 = float('-inf') if part1 == 0 else nums1[part1 - 1]      #For this part we check whether initials are not partitioned at 0 index
+            min_right1 = float('inf') if part1 == len1 else nums1[part1]         #For this part we check whether initials are not partitioned at maximum index
             max_left2 = float('-inf') if part2 == 0 else nums2[part2 - 1]
             min_right2 = float('inf') if part2 == len2 else nums2[part2]
 
