@@ -39,4 +39,4 @@ def twoSum(nums, target):
         if complement in num_map:   # Have I seen that needed number before?
             return [num_map[complement], i]  # If yes — Yay! Found the two spots!
         
-        num_map[num] = i  # Didn't find it? No problem! Write this number 
+        num_map[num] = i  # Didn't find it? No problem! Write this number
