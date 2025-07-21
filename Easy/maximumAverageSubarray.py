@@ -34,4 +34,4 @@ def findMaxAverage(self, nums: List[int], k: int) -> float:
             s += nums[i] - nums[i - k]        #We add the removal of initial elements (This is the core logic. It may take time to understand)
             if s > m:
                 m = s
-        return m / float(k)
+        return m / float(k)  #We divide the maximum sum by the total elements required for average
