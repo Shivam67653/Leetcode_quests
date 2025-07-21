@@ -28,10 +28,10 @@
 # -104 <= nums[i] <= 104
 
 def findMaxAverage(self, nums: List[int], k: int) -> float:
-        s = sum(nums[:k])
+        s = sum(nums[:k])      #Sum elements before the Kth element
         m = s
-        for i in range(k, len(nums)):
-            s += nums[i] - nums[i - k]
+        for i in range(k, len(nums)):        # We move with K till end
+            s += nums[i] - nums[i - k]        #We add the removal of initial elements (This is the core logic. It may take time to understand)
             if s > m:
                 m = s
         return m / float(k)
