@@ -41,7 +41,7 @@ def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
                 result.append(matrix[row][right])
             right -= 1
 
-            # Traverse from Right to Left
+            # Traverse from Right to Left  Always remember conditions are for reverse travelling
             if top <= bottom:
                 for col in range(right, left - 1, -1):
                     result.append(matrix[bottom][col])
