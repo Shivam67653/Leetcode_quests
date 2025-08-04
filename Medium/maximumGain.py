@@ -39,7 +39,7 @@ def maximumGain(self, s: str, x: int, y: int) -> int:
             for ch in s:
                 if stack and stack[-1] == first and ch == second:
                     stack.pop()
-                    points += score
+                    points += score #
                 else:
                     stack.append(ch)
             return ''.join(stack), points
